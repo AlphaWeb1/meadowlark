@@ -1,5 +1,5 @@
 {
-  "name": "project-class",
+  "name": "meadowlark",
   "version": "1.0.0",
   "description": "this project is to understand node",
   "main": "app.js",
@@ -7,7 +7,7 @@
     "test": "echo \"This is a test packge project\" && exit 1"
   },
   "keywords": [
-    "test-project"
+    "test-project", "meadowlark project practise", "meadowlark travels", "node project practise"
   ],
   "author": "Abdullaah",
   "license": "ISC",

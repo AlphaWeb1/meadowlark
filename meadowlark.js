@@ -1,6 +1,7 @@
 /* Node libraries init */
 const express = require('express'), 
-    handlebars = require('express-handlebars');
+    handlebars = require('express-handlebars'), 
+    fortune = require('./lib/fortune.js');;
     /* var handlebars = require('express3-handlebars').create({ defaultLayout:'main' }); // alternatively */
 
     /* initialize express */
@@ -13,15 +14,6 @@ const express = require('express'),
 
     /* Global paths or directories */
     app.use(express.static(`${__dirname}/public`));
-
-    /* Data Declaration */
-    const fortunes = [
-        "Conquer your fears or they will conquer you.",
-        "Rivers need springs.",
-        "Do not fear what you don't know.",
-        "You will have a pleasant surprise.",
-        "Whenever possible, keep it simple.",
-    ];
 
     /* Global Variables */
     handlebars.create({
@@ -53,12 +45,12 @@ const express = require('express'),
     }); // about route
 
     app.get('/tell-fortune', (req, res) => {
-        randomFortune = fortunes[ Math.floor(Math.random() * fortunes.length)];
+        fortune.addFortune("The tunnel is full of sparkling light, just a little hold");
         res.render('fortune', {
             helpers: {
                 title: _=> 'Meadowlark Travel: Fortune Teller'
             },
-            fortune: randomFortune
+            fortune: fortune.getFortune()
         });
     }); // fortune route
 

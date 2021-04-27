@@ -1,0 +1,19 @@
+<h1>Meadowlark Travel: Edit Tour</h1>
+    <a href="/tours" class="btn btn-sm btn-outline-secondary float-right">Back</a>
+
+<div class="row justify-content-center">
+    <form method="post" action="/tour/{{tour.id}}?_method=PUT" class="col-xs-12 col-sm-8 col-md-7 col-lg-6 col-xl-5">
+        <div class="form-group">
+            <label for="name" class="form-label">Tour Name</label>
+            <input type="text" name="name" id="name" value="{{tour.name}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="price" id="price" value="{{tour.price}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="_method" value="put">
+            <button type="submit" name="send" class="btn btn-block btn-outline-success">Save Changes</button>
+        </div>
+    </form>
+</div>

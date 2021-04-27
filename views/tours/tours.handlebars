@@ -1,0 +1,33 @@
+<h1>Meadowlark Travel: Tours</h1>
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-11">
+        <div class="table-responsive">
+            <table class="table table-stripe">
+                <thead class="th-secondary">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price (#)</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    {{#if tours.length}}
+                        {{#each tours as |tour idx|}}
+                            <tr>
+                                <td>{{idx}}</td>
+                                <td>{{tour.name}}</td>
+                                <td>#{{tour.price}}</td>
+                                <td>
+                                    <a href="/tour/edit/{{tour.id}}" class="btn btn-outline-info btn-sm">Edit</a>
+                                    <a href="/tour/{{tour.id}}?_method=DELETE" class="btn btn-outline-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    {{/if}}
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

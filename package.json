@@ -7,14 +7,29 @@
     "test": "echo \"This is a test packge project\" && exit 1"
   },
   "keywords": [
-    "test-project", "meadowlark project practise", "meadowlark travels", "node project practise"
+    "test-project",
+    "meadowlark project practise",
+    "meadowlark travels",
+    "node project practise"
   ],
   "author": "Abdullaah",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "chalk": "^4.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
+    "jquery": "^3.6.0",
     "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.9.2",
+    "chai": "^4.3.4",
+    "grunt": "^1.4.0",
+    "grunt-cafe-mocha": "^0.1.13",
+    "grunt-contrib-jshint": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mocha": "^8.3.2",
+    "zombie": "^6.1.4"
   }
 }

@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{{title}} Custom</title>
     <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    {{#if showTests}}
-        <link rel="stylesheet" href="/vendor/mocha.css">
-    {{/if}}
-    {{{_sections.head}}}
 </head>
 <body>
     <header>
@@ -21,21 +17,10 @@
         </nav>
     </header>
     <div class="container">
+        <h4>Custom Layout</h4>
         {{{body}}}
     </div>
     <script src="/assets/jquery/jquery.min.js"></script>
-    {{{_sections.jquery}}}
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    {{#if showTests}}
-        <div id="mocha"></div>
-        <script src="/vendor/mocha.js"></script>
-        <script src="/vendor/chai.js"></script>
-        <script src="/assets/js/js.js"></script>
-        <script src="/qa/tests-global.js"></script>
-        {{#if pageTestScript}}
-            <script src="{{pageTestScript}}"></script>
-        {{/if}}
-        <script>mocha.run();</script>
-    {{/if}}
 </body>
 </html>
